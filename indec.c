@@ -59,19 +59,22 @@ void insertNumbers(int numbers[], int size){
     }
 }
 
+// display the numbers in the array
 void displayNumbers(int numbers[], int size){
     for(int i = 0; i < size; i++){
         printf("%d ", numbers[i]);
     }
 }
 
+// delete a number from the array
 void deleteNumber(int numbers[], int size, int index){
     for(int i = index; i < size; i++){
         numbers[i] = numbers[i+1];
     }
-    size--;
+    --size;
 }
 
+// search for a number in the array
 int searchNumber(int numbers[], int size, int number){
     for(int i = 0; i < size; i++){
         if(numbers[i] == number){
@@ -82,7 +85,6 @@ int searchNumber(int numbers[], int size, int number){
 }
 
 // Bubble sort algorithm
-
 int* sortArray(int numbers[], int size){
     for(int i = 0; i < size; i++){
         for(int j = i + 1; j < size; j++){ 
@@ -92,6 +94,23 @@ int* sortArray(int numbers[], int size){
                 numbers[j] = temp;
             }
         }
+    }
+    return numbers;
+}
+
+
+// selection sort algorithm
+int* sortArray(int numbers[], int size){
+    for(int i = 0; i < size; i++){
+        int min = i;
+        for(int j = i + 1; j < size; j++){
+            if(numbers[j] < numbers[min]){
+                min = j;
+            }
+        }
+        int temp = numbers[i];
+        numbers[i] = numbers[min];
+        numbers[min] = temp;
     }
     return numbers;
 }
