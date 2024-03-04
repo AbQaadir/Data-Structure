@@ -2,9 +2,8 @@
 
 int main(){
     int a = 10;
-    int *p;
+    int *p = &a;
 
-    p = &a;
 
     printf("The value of a is %d\n", a);
     printf("The value of a is %d\n", *p);

@@ -72,3 +72,14 @@ int getMin(int numbers[], int size){
     }
     return min;
 }
+
+// get the maximum number in the array using simple method
+int getMax(int numbers[], int size){
+    int max = numbers[0];
+    for(int i = 0; i < size; i++){
+        if(numbers[i] > max){
+            max = numbers[i];
+        }
+    }
+    return max;
+}

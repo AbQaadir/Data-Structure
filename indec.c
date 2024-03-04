@@ -48,6 +48,8 @@ int main(){
     printf("\n");
 
 
+    int length = sizeof(numbers)/sizeof(numbers[0]);
+
 
 }
 
@@ -114,3 +116,4 @@ int* sortArray(int numbers[], int size){
     }
     return numbers;
 }
+
