@@ -1,1 +1,28 @@
+#include <stdio.h>
 
+int main() {
+    FILE *file_pointer;
+    char text[100]; // Assuming maximum length of text is 100 characters
+
+    // Open file in write mode
+    file_pointer = fopen("example.txt", "w");
+    // Check if file opened successfully
+    if (file_pointer == NULL) {
+        printf("Error opening file.\n");
+        return -1;
+    }
+
+    // Get text input from user
+    printf("Enter text to write to file: ");
+    fgets(text, sizeof(text), stdin);
+
+    // Write text to file
+    fputs(text, file_pointer);
+
+    // Close file
+    fclose(file_pointer);
+
+    printf("Data written to file successfully.\n");
+
+    return 0;
+}
