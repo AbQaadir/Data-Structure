@@ -11,9 +11,7 @@
 int main(){
 
     int stack[5];
-
     int top = -1;
-
     int choice, element;
 
     do{
@@ -36,6 +34,7 @@ int main(){
                     stack[top] = element;
                 }
                 break;
+                
             case 2:
                 if(top == -1){
                     printf("Stack is empty\n");
@@ -44,6 +43,7 @@ int main(){
                     top--;
                 }
                 break;
+
             case 3:
                 if(top == -1){
                     printf("Stack is empty\n");
